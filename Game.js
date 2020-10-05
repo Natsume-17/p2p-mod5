@@ -17,6 +17,7 @@ class Game {
         this.opponentShots = []; // Disparos del oponente
         this.xDown = null; //  Posición en la que el usuario ha tocado la pantalla
         this.paused = false; // Indica si el juego está pausado
+        this.score = 0; // Indica la puntuación del jugador
     }
 
     /**
@@ -214,7 +215,7 @@ class Game {
     /**
      * resetea el juego
      */
-     resetGame () {
+    resetGame () {
        document.location.reload();
      }
 
@@ -237,6 +238,8 @@ class Game {
             this.checkCollisions();
             this.render();
         }
+        document.getElementById("scoreli").innerHTML = "<strong>Score:</strong> " + this.score;
+        document.getElementById("livesli").innerHTML = "<strong>Lives:</strong> " + this.player.lives;
     }
 
     /**

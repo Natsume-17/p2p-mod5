@@ -1,5 +1,5 @@
-# p2p-mod4
-Ejercicio obligatorio P2P del módulo 4 (curso de "Desarrollo frontend con HTML, CSS y JavaScript" - 10ª edición).
+# p2p-mod5
+Ejercicio obligatorio P2P del módulo 5 (curso de "Desarrollo frontend con HTML, CSS y JavaScript" - 10ª edición).
 
 ## Objetivo
 

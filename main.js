@@ -5,7 +5,9 @@ const OPPONENT_HEIGHT = 5,
     OPPONENT_WIDTH = 5,
     BOSS_PICTURE = "assets/jefe.png",
     BOSS_PICTURE_DEAD = "assets/jefe_muerto.png",
+    TIME_BOSS = false,
     GAME_OVER_PICTURE = "assets/game_over.png",
+    YOU_WIN_PICTURE = "assets/you_win.png",
     KEY_LEFT = "LEFT",
     KEY_RIGHT = "RIGHT",
     KEY_SHOOT = "SHOOT",
@@ -16,18 +18,17 @@ const OPPONENT_HEIGHT = 5,
     PLAYER_SPEED = 20,
     PLAYER_WIDTH = 5,
     PLAYER_LIVES = 3,
-    PLAYER_WIN_PICTURE = "assets/you_win.png",
     SHOT_HEIGHT = 1.5,
     SHOT_SPEED = 20,
     SHOT_PICTURE_PLAYER = "assets/shot1.png",
     SHOT_PICTURE_OPPONENT = "assets/shot2.png",
     SHOT_WIDTH = 1.5;
 
-function getRandomNumber (range) {
+function getRandomNumber(range) {
     return Math.floor(Math.random() * range);
 }
 
-function collision (div1, div2) {
+function collision(div1, div2) {
     const a = div1.getBoundingClientRect(),
         b = div2.getBoundingClientRect();
     return !(a.bottom < b.top || a.top > b.bottom || a.right < b.left || a.left > b.right);
@@ -35,7 +36,6 @@ function collision (div1, div2) {
 }
 var game;
 document.addEventListener("DOMContentLoaded", () => {
-        game = new Game();
-        game.start();
-    }
-);
+    game = new Game();
+    game.start();
+});

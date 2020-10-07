@@ -4,11 +4,11 @@ html {
 body {
 	background-color: rgb(35, 35, 35);
 }
-.Opponent {
+.Opponent, .Boss {
 	animation: rotation 3s infinite linear;
 	-webkit-animation: rotation 3s infinite linear;
 }
-.paused .Opponent {
+.paused .Opponent, .paused .Boss {
 	animation: none;
 	-webkit-animation: none;
 }
